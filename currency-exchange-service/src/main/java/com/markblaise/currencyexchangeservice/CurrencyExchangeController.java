@@ -17,7 +17,7 @@ public class CurrencyExchangeController {
 	@Autowired
 	private ExchangeValueRepository exchangeValRepo;
 	
-	@GetMapping("/currency-exchange/from{from}/to/{to}")
+	@GetMapping("/currency-exchange/from/{from}/to/{to}")
 	public ExchangeValue retrieveExchangeValue(@PathVariable String from, @PathVariable String to) {
 		
 		ExchangeValue exchangeValue = exchangeValRepo.findByFromAndTo(from, to);
